@@ -15,19 +15,19 @@
 
 4. Create a security group with following inbound and out-bound rules and attach this group to all running instances.
 
-IN-BOUND RULES - 2 SETS
-              SET 1                       SET 2
-TYPE -        ALL TRAFFIC                 SSH
-PROTOCOL -    ALL                         TCP
-PORT RANGE -  ALL                         22
-SOURCE -      LEAVE AS IS                 0.0.0.0/0
+| TYPE      | PROTOCOL | PORT RANGE | SOURCE    | 
+|---------- |--------- |----------- |---------- |
+|All Traffic| All      |  All       | As Is     |
+|---------- |--------- |----------- |---------- |
+| SSH       | TCP      |  22        | 0.0.0.0/0 |
+|---------- |--------- |----------- |---------- |
 
 
-OUT-BOUND RULES
-TYPE -        ALL TRAFFIC                 
-PROTOCOL -    ALL                         
-PORT RANGE -  ALL                       
-DESTINATION - 0.0.0.0/0
+Out-Bound rules
+| TYPE      | PROTOCOL | PORT RANGE | DESTINATION    | 
+|---------- |--------- |----------- |--------------- |
+|All Traffic| All      |  All       | 0.0.0.0/0      |
+|---------- |--------- |----------- |--------------- |
 
 5. Create IAM policy with 
 EC2FullAccess, ECSFullAccess, EC2RFullAccess, S3FullAccess, RoleForSSM
