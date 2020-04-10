@@ -1,0 +1,32 @@
+version: '3.7'
+
+services:
+  jmeter_base:
+    image: jmeter:base
+    build:
+      context: ./Jmeter_base
+      dockerfile: Dockerfile
+    # networks:
+    #   - jmeter_network
+
+  jmeter_master:
+    image: jmeter:master
+    build:
+      context: ./Jmeter_master
+      dockerfile: Dockerfile
+    # volumes: 
+      # - /home/ec2-user/aut/:/opt/aut/
+    # networks:
+    #   - jmeter_network
+
+  jmeter_slave:
+    image: jmeter:slave
+    build:
+      context: ./Jmeter_slave
+      dockerfile: Dockerfile
+    # networks:
+    #   - jmeter_network
+
+# networks:
+#   jmeter_network:
+#     driver: host
