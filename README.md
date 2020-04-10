@@ -18,17 +18,13 @@
 | TYPE      | PROTOCOL | PORT RANGE | SOURCE    | 
 |---------- |--------- |----------- |---------- |
 |All Traffic| All      |  All       | As Is     |
-|---------- |--------- |----------- |---------- |
 | SSH       | TCP      |  22        | 0.0.0.0/0 |
-|---------- |--------- |----------- |---------- |
 
 
 Out-Bound rules
 | TYPE      | PROTOCOL | PORT RANGE | DESTINATION    | 
 |---------- |--------- |----------- |--------------- |
 |All Traffic| All      |  All       | 0.0.0.0/0      |
-|---------- |--------- |----------- |--------------- |
 
 5. Create IAM policy with 
 EC2FullAccess, ECSFullAccess, EC2RFullAccess, S3FullAccess, RoleForSSM
-
