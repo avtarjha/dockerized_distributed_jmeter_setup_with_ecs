@@ -30,9 +30,15 @@ EC2FullAccess, ECSFullAccess, EC2RFullAccess, S3FullAccess, RoleForSSM
 
 7. Create a task defeinition of type EC2. While creating task definition in ECS, mention following in environment variable section for container for both master and slave.
 ```
--e Xms=256m -e Xmx=512m -e MaxMetaspaceSize=512m -v /opt/Sharedvolume:/opt/Sharedvolume
+-e Xms=256m -e Xmx=512m -e MaxMetaspaceSize=512m
 ```
 
+Mount volumes 
+```
+/opt/Sharedvolume:/opt/Sharedvolume
+```
+
+-v /opt/Sharedvolume:/opt/Sharedvolume
 8. Network type should be HOST and master should have container port as 60000 where as slave should have container ports as 50000 and 1099. Create task definitions and run 1 master task and 2 slave tasks.
 
 For running distributed tests, please refer https://github.com/avtarjha/distributed_load_testing_jmeter_ecs
