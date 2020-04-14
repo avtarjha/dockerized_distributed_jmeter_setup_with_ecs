@@ -8,6 +8,8 @@
 
 3. Create a security group with following inbound and out-bound rules and attach this group to all running instances.
 
+In-bound rules
+
 | TYPE      | PROTOCOL | PORT RANGE | SOURCE    | 
 |---------- |--------- |----------- |---------- |
 |All Traffic| All      |  All       | As Is     |
