@@ -37,8 +37,6 @@ Mount volumes
 ```
 /opt/Sharedvolume:/opt/Sharedvolume
 ```
-
--v /opt/Sharedvolume:/opt/Sharedvolume
 8. Network type should be HOST and master should have container port as 60000 where as slave should have container ports as 50000 and 1099. Create task definitions and run 1 master task and 2 slave tasks.
 
 For running distributed tests, please refer https://github.com/avtarjha/distributed_load_testing_jmeter_ecs
